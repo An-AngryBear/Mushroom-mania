@@ -7,12 +7,16 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
 	<body ng-app="mushApp">
+
 		<div ng-include="'partials/navbar.html'"></div>
 
-		<div class="radioGrp" ng-controller="mushCtrl">
-			<label class="radioBtn"><input type="radio" name="poison">Poisonous</label>
-			<label class="radioBtn"><input type="radio" name="poison">Non-Poisonous</label>
+		<div ng-include="'partials/poison-btns.html'"></div>
+			<!-- put into partial, only display when user has searched -->
+
+
+		<div ng-view>
 		</div>
+
 		<!-- third-party scripts -->
 	  <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
 	  <script type="text/javascript" src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js">
