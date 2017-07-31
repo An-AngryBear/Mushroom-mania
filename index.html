@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>mushroom mania</title>
+		<link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body ng-app="mushApp">
+		<div ng-include="'partials/navbar.html'"></div>
+
+		<div class="radioGrp" ng-controller="mushCtrl">
+			<label class="radioBtn"><input type="radio" name="poison">Poisonous</label>
+			<label class="radioBtn"><input type="radio" name="poison">Non-Poisonous</label>
+		</div>
+		<!-- third-party scripts -->
+	  <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+	  <script type="text/javascript" src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js">
+	  </script>
+	  <script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
+	  <script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
+	  <script type="text/javascript" src="lib/node_modules/firebase/firebase.js"></script>
+	  <!-- app files -->
+	  <script type="text/javascript" src="app/app.js"></script>
+	  <!-- providers -->
+	  <script type="text/javascript" src="app/factories/mushFactory.js"></script>
+	  <!-- controllers -->
+	  <script type="text/javascript" src="app/controllers/navCtrl.js"></script>
+	  <script type="text/javascript" src="app/controllers/mushCtrl.js"></script>
+
+	</body>
+</html>
