@@ -1,10 +1,10 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" ng-controller="navCtrl">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Mushroom Mania</a>
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Search">
+      <input type="text" class="form-control" placeholder="Search" ng-model="searchText.searchTerm">
     </div>
   </div>
 </nav>

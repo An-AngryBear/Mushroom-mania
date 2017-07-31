@@ -10,9 +10,10 @@
 
 		<div ng-include="'partials/navbar.html'"></div>
 
-		<div ng-include="'partials/poison-btns.html'"></div>
-			<!-- put into partial, only display when user has searched -->
-
+		<div class="radioGrp">
+			<label class="radioBtn"><input type="radio" value="false" ng-model="toxic" name="poison">Poisonous</label>
+			<label class="radioBtn"><input type="radio" value="true" ng-model="toxic" name="poison">Non-Poisonous</label>
+		</div>
 
 		<div ng-view>
 		</div>
@@ -24,10 +25,14 @@
 	  <script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
 	  <script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
 	  <script type="text/javascript" src="lib/node_modules/firebase/firebase.js"></script>
+
 	  <!-- app files -->
 	  <script type="text/javascript" src="app/app.js"></script>
+
 	  <!-- providers -->
 	  <script type="text/javascript" src="app/factories/mushFactory.js"></script>
+	  <script type="text/javascript" src="app/factories/filterFactory.js"></script>
+
 	  <!-- controllers -->
 	  <script type="text/javascript" src="app/controllers/navCtrl.js"></script>
 	  <script type="text/javascript" src="app/controllers/mushCtrl.js"></script>

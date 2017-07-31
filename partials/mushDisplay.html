@@ -1,4 +1,4 @@
-<div class="mush-card" ng-repeat="mush in mushrooms">
+<div class="mush-card" ng-repeat="mush in mushrooms | filter:{edible:toxic, name:searchText.searchTerm}">
 	<h2>{{mush.name}}</h2>
 	<h4>Edible: {{mush.edible}}</h4>
 	<p>{{mush.description}}</p>

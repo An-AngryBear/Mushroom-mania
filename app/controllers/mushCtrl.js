@@ -1,6 +1,8 @@
 'use strict';
 
-mushApp.controller('mushCtrl', function($scope, $window, MushFactory) {
+mushApp.controller('mushCtrl', function($scope, $window, MushFactory, FilterFactory) {
+
+	$scope.searchText = FilterFactory;
 
 	$scope.mushrooms = [];
 
@@ -14,29 +16,29 @@ mushApp.controller('mushCtrl', function($scope, $window, MushFactory) {
 
 	getMushrooms();
 
-	$scope.getPoisonous = () => {
-		MushFactory.getMushroomData()
-		.then( (mushData) => {
-			let mushList = Object.values(mushData.data);
-			let poisonous = mushList.filter( (mushroomObj) => {
-				return !mushroomObj.edible;
-			});
-			console.log(poisonous);
-		});
+	// $scope.
 
-	};
+	// $scope.getPoisonous = () => {
+	// 	MushFactory.getMushroomData()
+	// 	.then( (mushData) => {
+	// 		let mushList = Object.values(mushData.data);
+	// 		let poisonous = mushList.filter( (mushroomObj) => {
+	// 			return !mushroomObj.edible;
+	// 		});
+	// 		console.log(poisonous);
+	// 	});
 
-	$scope.getNonPoisonous = () => {
-		MushFactory.getMushroomData()
-		.then( (mushData) => {
-			let mushList = Object.values(mushData.data);
-			let nonPoisonous = mushList.filter( (mushroomObj) => {
-				return mushroomObj.edible;
-			});
-			console.log(nonPoisonous);
-		});
-	};
+	// };
 
-
+	// $scope.getNonPoisonous = () => {
+	// 	MushFactory.getMushroomData()
+	// 	.then( (mushData) => {
+	// 		let mushList = Object.values(mushData.data);
+	// 		let nonPoisonous = mushList.filter( (mushroomObj) => {
+	// 			return mushroomObj.edible;
+	// 		});
+	// 		console.log(nonPoisonous);
+	// 	});
+	// };
 
 });
